@@ -23,14 +23,27 @@ public:
 };
 class Dog : private Animal
 {
+public:
+    void dogs()
+    {
+        cout << "Dogs Barking" << endl;
+    }
 };
 class Cat : private Animal
 {
+public:
+    void cats()
+    {
+        cout << "Cats Meow" << endl;
+    }
 };
 int main()
 {
     Animal a;
+    Dog d;
+    Cat c;
     a.setter();
-    a.getter();
+    d.dogs();
+    c.cats();
     return 0;
 }

@@ -4,14 +4,7 @@ using namespace std;
 class Shape
 {
 public:
-    string shape;
-
-public:
-    void draw()
-    {
-        cout << "Enter The Shape Drawing : ";
-        cin >> shape;
-    }
+    virtual void draw() = 0;
 };
 class Circle : public Shape
 {
@@ -39,8 +32,7 @@ public:
 };
 int main()
 {
-    Shape *s[2];
-    s[0] = new Circle;
-    s[1] = new Rectangle;
+    Rectangle r;
+    Circle c;
     return 0;
 }

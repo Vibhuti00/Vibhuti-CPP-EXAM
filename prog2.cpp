@@ -25,20 +25,22 @@ public:
         cout << "Enter The Number Of Age : " << age << endl;
         cout << "Enter The Address : " << age << endl;
     }
-    void diaplay(int n)
-    {
-        cout << "Enter The Number Of Person : ";
-        cin >> n;
-    }
 };
-static Person ::value = 2;
+// static Person ::value = 2;
 int main()
 {
     string name;
-    int age;
+    int age, n;
     string address;
     Person p;
-    p.setpersonDetails(name, age, address);
-    p.getpersonDetails();
+    cout << "Enter The Number Of Person : ";
+    cin >> n;
+    for (int i = 0; i < n; i++)
+    {
+        cout << "Person " << i + 1 << " : " << endl;
+        p.setpersonDetails(name, age, address);
+        p.getpersonDetails();
+    }
+
     return 0;
 }
